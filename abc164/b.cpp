@@ -5,13 +5,16 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-    int s,w;
-    cin >> s >> w;
-    if(s<=w){
-        cout << "unsafe" << endl;
-    }else{
-        cout << "safe" << endl;
+    ll n,m;
+    cin >> n >> m;
+    vector<int> a(m);
+    rep(i,m) cin >> a[i];
+    ll ans=n;
+    rep(i,m) ans -= a[i];
+    if(ans<0){
+        cout << "-1" << endl;
+        return 0;
     }
-
-return 0;
+    cout << ans << endl;
+    return 0;
 }

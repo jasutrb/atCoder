@@ -7,13 +7,14 @@ using P = pair<int,int>;
 int main() {
     int n;
     cin >> n;
-    set<string> gacha;
-    string s;
-    rep(i,n){
-        cin >> s;
-        gacha.insert(s);
+    vector<int> v(n+1);
+    int a;
+    for(int i=0;i<n-1;i++){
+        cin >> a;
+        v[a]++;
     }
-    cout << gacha.size() << endl;
-
+    for(int i=1;i<n+1;i++){
+        cout << v[i] << endl;
+    }
 return 0;
 }

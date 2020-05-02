@@ -1,21 +1,12 @@
 #include <bits/stdc++.h>
-#define rep(i,n) for (int i = 0; i < (n); ++i)
+#define rep(i,n) for(int i=0; i<n ; i++)
+const double PI=3.141592653589793;
 using namespace std;
-using ll = long long;
-using P = pair<int,int>;
 
-int main() {
-    int Th,Ta,Ah,Aa;
-    cin >> Th >> Ta >> Ah >> Aa;
-    int Td,Ad;
-    Td = ceil((double)Th / (double)Aa);
-    Ad = ceil((double)Ah / (double)Ta);
-    //cout << Td  << " " << Ad << endl;
-    if(Td>=Ad){
-        cout << "Yes" << endl;
-    }else{
-        cout << "No" << endl;
-    }
-
+int main(){
+    double r;
+    cin >> r;
+    //cout << r * PI << endl;
+    printf("%.9f\n",2*r*PI);
     return 0;
 }
